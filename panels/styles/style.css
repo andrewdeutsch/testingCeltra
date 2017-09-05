@@ -1,0 +1,331 @@
+/************ 
+TAG STYLES
+ ************/
+html, body {
+	height: 100%;
+}
+ 
+body {
+	color: white;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+/************ 
+Panel STYLES
+ ************/
+#panel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+#panel-lightbox{
+	width: 100%;
+	height: 100%;
+}
+
+.lightbox-coppa{
+	background-color: rgba(0,0,0,.8);
+}
+
+.lightbox-noncoppa{
+	background-color: rgba(0,0,0,.5);
+}
+
+#panel-container{
+	width: 100%;		/*Panel Width*/
+	height: 100%;		/*Panel Height*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: auto;
+	right: 0;
+	bottom: 0;
+	max-width: 100%px;	/*Also update max-width to panel Width, this will help panel not to expand then its max width*/
+	max-height: 100%px;	/*Also update max-height to panel Height, this will help panel not to expand then its max height*/
+}
+
+.panel-container-COPPA{
+	border:1px solid white;
+}
+
+.panel-container-NonCOPPA{
+	border:1px solid black;
+}
+
+#panel-creative-container{
+	background-color:white;
+	position: relative;
+}
+
+#panel-creative{
+	position: relative;
+}
+
+#logo-container{
+	width: 100%;
+	height:100%;
+	/*//background-image: url(../images/logo.png);
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;*/
+}
+
+.logo-container-portrait{
+	/*height: 6%;
+  	width: 36%;
+  	left: 2%;*/
+  	position: absolute;
+  	//top: 2%;
+}
+
+.logo-container-landscape{
+	position: absolute;
+	/*left: 1%;
+	margin-top: 2%;*/
+	/*width: 18%;
+  	height: 7%;
+*/}
+
+
+/************ 
+HEADER BAR STYLES THAT INCLUDES COUNTDOWN TIMER AND CLOSE BUTTON
+ ************/
+#header-section{
+	overflow-x: hidden;
+	width: 100%;
+}
+
+#close-container{
+	float: right;
+	display: inline-block;
+}
+
+#close-landscape{
+	width: 133px;
+	background-color: white;
+	height: 28px;
+	display: inline-block;
+	background-image: url('../images/click_to_close_AD.png');
+	background-origin: content-box;
+	background-repeat: no-repeat;
+  	font-family: Arial;
+  	overflow: hidden;
+}
+
+#close-portrait{
+	background-image: url('../images/close.png');
+	background-position: bottom;
+	width: 33px;
+	height: 29px;
+	background-repeat: no-repeat;
+	background-origin: content-box;
+	display: none;
+  	overflow: hidden;
+}
+
+.close-container-COPPA{
+	border: 1px solid white;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.close-container-NonCOPPA{
+	border: 1px solid gray;
+ 	color: #bfbfbf;
+}
+
+#close-button-portrait{
+	display: inline-block;
+	position: relative;
+	width: 28px;
+	height: 100%;
+	float: right;
+	cursor: pointer;
+}
+
+#close-button-landscape{
+	width: 132px;
+	text-align: center;
+	font-size: 10pt;
+	display: inline-block;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	cursor: pointer;
+	color: white;
+}
+
+#close-button-landscape:hover{
+	color: rgb(249, 239, 0);
+}
+
+#creative-element{
+	z-index: 100000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/************ 
+PANEL EXPAND ANIMATION
+ ************/
+.expand-animation {
+	-webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+   		    transform-style: preserve-3d;
+
+    /* Safari 4+ */
+    -webkit-animation-name: expand-content;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.6s;
+
+	/* Fx 5+ */
+    -moz-animation-name: expand-content;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.6s;
+
+    /* Opera 12+ */
+    -o-animation-name: expand-content;
+    -o-animation-timing-function: ease-in;
+    -o-animation-duration: 0.6s;
+
+    /* IE 10+, Fx 29+ */
+    animation-name: expand-content;
+    animation-timing-function: ease-in;
+    animation-duration: 0.6s;
+
+    -webkit-animation-fill-mode:none;
+       -moz-animation-fill-mode:none;
+         -o-animation-fill-mode:none;
+            animation-fill-mode:none;
+   }
+
+@keyframes expand-content{
+	from {
+		transform:scale(.002,.002);
+	}
+	50% {
+		transform:scale(1,.002);
+	}
+	80% {
+		transform:scale(1,1);
+	}
+	to {
+		transform:scale(1,1);
+	}
+}
+
+@-webkit-keyframes expand-content{
+	0% {
+		-webkit-transform:scale(.002,.002);
+	}
+	50% {
+		-webkit-transform:scale(1,.002);
+	}
+	90% {
+		-webkit-transform:scale(1,1);
+	}
+	100% {
+		-webkit-transform:scale(1,1);
+	}
+}
+
+@-moz-keyframes expand-content{
+	0% {
+		-moz-transform:scale(.002,.002);
+	}
+	50% {
+		-moz-transform:scale(1,.002);
+	}
+	90% {
+		-moz-transform:scale(1,1);
+	}
+	100% {
+		-moz-transform:scale(1,1);
+	}
+}
+
+/************ 
+PANEL COLLAPSE ANIMATION
+ ************/
+.collapse-animation {
+
+	-webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+   		    transform-style: preserve-3d;
+
+    /* Safari 4+ */
+    -webkit-animation-name: collapse-content;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.6s;
+
+	/* Fx 5+ */
+    -moz-animation-name: collapse-content;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.6s;
+
+    /* Opera 12+ */
+    -o-animation-name: collapse-content;
+    -o-animation-timing-function: ease-in;
+    -o-animation-duration: 0.6s;
+
+    /* IE 10+, Fx 29+ */
+    animation-name: collapse-content;
+    animation-timing-function: ease-in;
+    animation-duration: 0.6s;
+
+    -webkit-animation-fill-mode:forwards;
+       -moz-animation-fill-mode:forwards;
+         -o-animation-fill-mode:forwards;
+            animation-fill-mode:forwards;
+}
+
+@keyframes collapse-content{
+	0% {
+		transform:scale(1,1);
+	}
+	50% {
+		transform:scale(1,.002);
+	}
+	100% {
+		transform:scale(.002,.002);
+	}
+}
+
+@-webkit-keyframes collapse-content{
+	0% {
+		-webkit-transform:scale(1,1);
+	}
+	50% {
+		-webkit-transform:scale(1,.002);
+	}
+	100% {
+		-webkit-transform:scale(.002,.002);
+	}
+}
+
+@-moz-keyframes collapse-content{
+	0% {
+		-moz-transform:scale(1,1);
+	}
+	50% {
+		-moz-transform:scale(1,.002);
+	}
+	100% {
+		-moz-transform:scale(.002,.002);
+	}
+}

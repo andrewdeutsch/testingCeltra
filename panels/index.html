@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+		<title>HTML5 Responsive Full Screen : Panel</title>
+		
+		<!-- Custom Format Styles-->
+		<link rel="stylesheet" href="../styles/reset.css"/>
+		<link rel="stylesheet" href="styles/style.css"/>
+
+		<script>EBModulesToLoad = ['Video','EBCMD'];</script>
+		
+		<!--[if lte IE 9]><script src="scripts/classList.js"></script><![endif]-->
+		<script type="text/javascript" src="../scripts/EBLoader.js"></script>
+
+		<!--Panel Script-->
+		<script type="text/javascript" src="../scripts/utils.js"></script>
+		<script type="text/javascript" src="scripts/script.js"></script>
+		 <script type="text/javascript" src="scripts/aframe.min.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="panel">
+				<div id="panel-lightbox"></div>
+				<div id="panel-container">
+					<div id="header-section">
+						<div id='close-container'>
+							<div id='close-landscape'>
+								<span id='close-button-landscape'>CLOSE [ X ]</span>
+							</div>
+							<div id='close-portrait'>
+								<div id='close-button-portrait'></div>
+							</div>
+						</div>
+					</div>
+					<div id="panel-creative-container">
+						<div id="panel-creative">
+							<div id='creative-element'>
+								<div id='logo-container' class="logo-container-landscape">
+																<a-scene crossOrigin="anonymous">
+							      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+							      
+							      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+							      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+							      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+							      <a-box position="-1 0.5 3" rotation="0 45 0" color="#4CC3D9"></a-box>
+							      <a-sphere position="0 1.25 5" radius="1.25" color="#EF2D5E"></a-sphere>
+							      <a-cylinder position="1 0.75 3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+							      <a-plane position="0 0 4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+							      <a-sky color="#ECECEC"></a-sky>
+							    </a-scene>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
