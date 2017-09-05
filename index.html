@@ -2,75 +2,60 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
-		<title>HTML5 Responsive Full Screen : Banner</title>
-		<link rel="stylesheet" href="styles/reset.css"/>
-		<style type="text/css">
-			html, body {
-				height: 100%;
-			}
-			body {
-				color: white;
-				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			}
-			#banner{
-				width: 298px;
-				height: 248px;
-				border: 1px solid gray;
-				cursor: pointer;
-				position: relative;
-				border-bottom-width: 2px;
-			}
-			#banner-sizmek-logo, #banner-sizmek-logo img{
-				height: 100%;
-				width: 100%;
-			}
-			#banner-rollover{
-				position: absolute;
-				top: 0;
-				left: 0;
-				display: none;
-			}
-			#expand-button{
-				display: none;
-				position: absolute;
-				width: 100px;
-				height: 35px;
-				bottom: 18px;
-				left: 0;
-				right: 0;
-				margin: 0 auto;
-			}
-			button {
-				background-color: #0068FF;
-				border: none;
-				color: white;
-				cursor: pointer;
-				font-family: Arial, sans-serif;
-				font-size: 12px;
-				outline: none;
-				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-				user-select: none;
-				margin: 0;
-				overflow: hidden;}
-				
-		</style>
-		<script>EBModulesToLoad = ['EBCMD'];</script>
-		<script type="text/javascript" src="scripts/EBLoader.js"></script>
-		<script type="text/javascript" src="scripts/utils.js"></script>
+		<title>HTML5 Responsive Full Screen : Panel</title>
+		
+		<!-- Custom Format Styles-->
+		<link rel="stylesheet" href="../styles/reset.css"/>
+		<link rel="stylesheet" href="styles/style.css"/>
+
+		<script>EBModulesToLoad = ['Video','EBCMD'];</script>
+		
+		<!--[if lte IE 9]><script src="scripts/classList.js"></script><![endif]-->
+		<script type="text/javascript" src="../scripts/EBLoader.js"></script>
+
+		<!--Panel Script-->
+		<script type="text/javascript" src="../scripts/utils.js"></script>
 		<script type="text/javascript" src="scripts/script.js"></script>
+		 <script type="text/javascript" src="scripts/aframe.min.js"></script>
 	</head>
 	<body>
 		<div id="container">
-			<div id="banner">
-				<div id='banner-sizmek-logo'>
-					<img src="images/banner.jpg">
-				</div>
-				<!--Expand Button will be displayed only for mobile devices-->
-				<button id='expand-button'>Expand</button>
-				<div id='banner-rollover'>
-					<img src="images/300x250_hovr.png">
+			<div id="panel">
+				<div id="panel-lightbox"></div>
+				<div id="panel-container">
+					<div id="header-section">
+						<div id='close-container'>
+							<div id='close-landscape'>
+								<span id='close-button-landscape'>CLOSE [ X ]</span>
+							</div>
+							<div id='close-portrait'>
+								<div id='close-button-portrait'></div>
+							</div>
+						</div>
+					</div>
+					<div id="panel-creative-container">
+						<div id="panel-creative">
+							<div id='creative-element'>
+								<div id='logo-container' class="logo-container-landscape">
+																<a-scene crossOrigin="anonymous">
+							      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+							      
+							      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+							      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+							      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+							      <a-box position="-1 0.5 3" rotation="0 45 0" color="#4CC3D9"></a-box>
+							      <a-sphere position="0 1.25 5" radius="1.25" color="#EF2D5E"></a-sphere>
+							      <a-cylinder position="1 0.75 3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+							      <a-plane position="0 0 4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+							      <a-sky color="#ECECEC"></a-sky>
+							    </a-scene>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
